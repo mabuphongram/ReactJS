@@ -1,29 +1,20 @@
-import styled, { ThemeProvider } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 
-const theme = {
-  colors: {
-    primary: 'blue',
-    secondary:'gray',
-  },
-  spacing:'10px'
+const GlobalStyle = createGlobalStyle`
+body{
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: black;
+  color:white;
 }
-
-const Button = styled.button`
-background-color:${props=> props.theme.colors.primary};
-padding:${props=> props.theme.spacing};
-color: white;
-`
-
-const Title = styled.h1`
-color:${props=>props.theme.colors.secondary}
 `
 
 function App() {
   return(
-    <ThemeProvider theme={theme}>
-      <Title> Welcome to Theme Styling</Title>
-      <Button>Styled with Theme</Button>
-    </ThemeProvider>
+    <div>
+      <GlobalStyle/>
+      <div>Welcome to Global Styling</div>
+    </div>
   )
 }
 
