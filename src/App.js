@@ -1,23 +1,15 @@
 import styled from "styled-components";
 
-const Button = styled.button`
-background-color:blue;
-color:white;
-padding:10px;
-`
-
-const SpeicalButton = styled(Button)`
-background-color: green;
-font-weight:bold;
+const Title = styled.h1`
+font-size:32px;
+color:black;
+color:navy;
 `;
-
-function App(){
-  return(
-    <div>
-      <Button>Regular Button</Button>
-      <SpeicalButton> Special Button</SpeicalButton>
-    </div>
-  )
+function App() {
+ return(
+  <div>
+  <Title>Styled Title</Title>
+</div>
+ )
 }
-
 export default App
