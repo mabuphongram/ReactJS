@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import styled from "styled-components";
 
+const Button = styled.button`
+background-color: blue;
+color:white;
+font-size:18px;
+padding: 10px 20px;
+border-radius:5px;
+border:none;
+cursor:pointer;
+
+&:hover {
+  background-color:darkblue;
+}
+`
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+return(
+  <div>
+  <Button>Click Me</Button>
+  </div>
+)
 }
 
-export default App;
+export default App
