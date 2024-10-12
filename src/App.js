@@ -1,28 +1,21 @@
 import styled from "styled-components";
 
 const Button = styled.button`
-background-color: ${props => props.primary? 'blue':'gray'};
-color: white;
-font-size:18px;
-padding: 10px 20px;
-border-radius:5px;
-border:none;
-cursor:pointer;
-
-&:hover{
-  background-color: ${props=> props.primary? 'darkblue':'darkgray'}
-}
+background-color:blue;
+color:white;
+padding:10px;
 `
+
+const SpeicalButton = styled(Button)`
+background-color: green;
+font-weight:bold;
+`;
 
 function App(){
   return(
     <div>
-      <Button primary>
-        Primary Button
-      </Button>
-      <Button>
-        Default Button
-      </Button>
+      <Button>Regular Button</Button>
+      <SpeicalButton> Special Button</SpeicalButton>
     </div>
   )
 }
