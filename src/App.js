@@ -1,15 +1,30 @@
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
+
+const theme = {
+  colors: {
+    primary: 'blue',
+    secondary:'gray',
+  },
+  spacing:'10px'
+}
+
+const Button = styled.button`
+background-color:${props=> props.theme.colors.primary};
+padding:${props=> props.theme.spacing};
+color: white;
+`
 
 const Title = styled.h1`
-font-size:32px;
-color:black;
-color:navy;
-`;
+color:${props=>props.theme.colors.secondary}
+`
+
 function App() {
- return(
-  <div>
-  <Title>Styled Title</Title>
-</div>
- )
+  return(
+    <ThemeProvider theme={theme}>
+      <Title> Welcome to Theme Styling</Title>
+      <Button>Styled with Theme</Button>
+    </ThemeProvider>
+  )
 }
+
 export default App
